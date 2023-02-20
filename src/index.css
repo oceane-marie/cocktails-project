@@ -14,8 +14,8 @@
   --mainRed: #bd0303;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 0.3rem;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --lightShadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+  --darkShadow: 0 1px 15px rgba(0, 0, 0, 0.4);
   --mainBorderRadius: 0.25rem;
   --smallWidth: 85vw;
   --maxWidth: 40rem;
@@ -104,17 +104,18 @@ img{
 }
 .btn-details{
   padding: 0.25rem 0.4rem;
+  background: var(--primaryLightColor);
+  color: var(--mainWhite);
 }
 .btn-details:hover{
-  background-color: var(--primaryLightColor);
-  border-color: var(--primaryLightColor);
+  background-color: var(--primaryColor);
+  color: var(--mainWhite);
 }
 .navbar{
   background-color: var(--mainWhite);
   height: 5rem;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid var(--primaryColor);
   box-shadow: var(--lightShadow);
 }
 .nav-center{
@@ -141,7 +142,7 @@ img{
   color: var(--primaryColor);
 }
 .logo{
-  width: 12rem;
+  width: 3rem;
 }
 .about-section{
   width: var(--smallWidth);
@@ -172,14 +173,14 @@ img{
 .cocktails-center{
   width: var(--smallWidth);
   margin: 0 auto;
-  max-width: var(--maxWidth);
+  /* max-width: var(--maxWidth); */
   display: grid;
   row-gap: 2rem;
   column-gap: 2rem;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 820px) {
   .cocktails-center{
-    grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 .cocktail{
@@ -234,6 +235,7 @@ img{
   margin-bottom: 1.25rem;
   color: var(--primaryColor);
 }
+
 .search-control input{
   width: 100%;
   border: none;
@@ -251,12 +253,14 @@ img{
   max-width: var(--maxWidth);
   margin: 0 auto;
   text-align: center;
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
 }
 .drink img{
-  border-radius: var(--mainBorderRadius);
+  border-radius: 0.5rem;
 }
 .drink p{
-  text-transform: capitalize;
   line-height: 1.8;
 }
 .drink span{
@@ -266,10 +270,11 @@ img{
   background-color: var(--primaryLightColor);
   padding: 0.25rem 0.5rem;
   border-radius: var(--mainBorderRadius);
-  color: var(--primaryColor);
+  color: var(--mainWhite);
 }
 .drink-info{
   padding-top: 2rem;
+  text-align: left;
 }
 @media screen and (min-width: 992px) {
   .drink{
